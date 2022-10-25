@@ -1,4 +1,6 @@
-.header {
+@import "../../styles/mixins";
+
+.nav-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,33 +28,36 @@
     }
   }
 
-  &__nav {
+  &__links {
     justify-self: center;
     align-self: center;
 
     @include mediaMobile {
       display: none;
     }
-    &-link {
-      color: #A0A3A7;
-      margin-right: 65px;
-      @include transitionAll;
+  }
+  &__link {
+    color: #a0a3a7;
+    margin-right: 65px;
+    @include transitionAll;
 
-      @include mediaTablet {
-        margin-right: 30px;
-      }
+    @include mediaTablet {
+      margin-right: 30px;
+    }
 
-      &:hover {
-        color: rgba(#A0A3A7, 0.7);
-      }
+    &:hover {
+      color: rgba(#a0a3a7, 0.7);
+    }
 
-      &:last-child { margin: 0;}
+    &:last-child {
+      margin: 0;
     }
   }
+
   &__burger {
     &-menu {
       display: none;
-    
+
       @include mediaMobile {
         display: block;
         justify-self: right;
@@ -65,18 +70,17 @@
       width: 10px;
       background-color: white;
       border-radius: 5px;
-      
+
       &:after {
-        content: '';
+        content: "";
         width: 10px;
         height: 1px;
         position: absolute;
         background-color: white;
         top: -3px;
-        
       }
       &:before {
-        content: '';
+        content: "";
         width: 10px;
         height: 1px;
         position: absolute;
@@ -91,12 +95,16 @@
     padding: 16px 24px;
     border: none;
     border-radius: 40px;
-    background: linear-gradient(to right, #E1E1E1, #FFFFFF);
-    color: #24282E;
+    background: linear-gradient(to right, #e1e1e1, #ffffff);
+    color: #24282e;
     @include transitionAll;
 
     &:hover {
-      background: linear-gradient(to right, rgba(#E1E1E1, 0.7), rgba(#FFFFFF, 0.7));
+      background: linear-gradient(
+        to right,
+        rgba(#e1e1e1, 0.7),
+        rgba(#ffffff, 0.7)
+      );
       cursor: pointer;
     }
 

@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-@import './vars';
-@import './mixins';
-@import './reset';
-@import './header';
-@import './slider';
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import "./styles/vars";
+@import "./styles/mixins";
+@import "./styles/reset";
 
 body {
-  background: linear-gradient(to right, #FC4060,#8061FD) no-repeat;
+  background: linear-gradient(to right, #fc4060, #8061fd) no-repeat;
   background-size: contain;
 }
 
@@ -15,19 +12,21 @@ body {
   height: 100vh;
   width: 100%;
   @include flexCenter;
-
 }
 
 .wrapper {
   @include container;
   margin: 0 auto;
   height: 80%;
-  
 
   position: relative;
   @include flexCenter;
 
-  background: linear-gradient(180deg, rgba(43, 34, 21, 0.8) -1.22%, #22282E 101.33%);
+  background: linear-gradient(
+    180deg,
+    rgba(43, 34, 21, 0.8) -1.22%,
+    #22282e 101.33%
+  );
   border-radius: 32px;
   font-family: $fontRoboto;
   @include mediaTablet {

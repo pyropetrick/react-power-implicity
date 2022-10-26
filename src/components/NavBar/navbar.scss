@@ -17,14 +17,12 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  &__logo {
-    svg {
-      @include mediaTablet {
-        width: 25px;
-      }
-      @include mediaMobile {
-        width: 15px;
-      }
+  svg {
+    @include mediaTablet {
+      width: 25px;
+    }
+    @include mediaMobile {
+      width: 20px;
     }
   }
 
